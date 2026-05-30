@@ -1,0 +1,21 @@
+{
+  "features": [
+    "opening_rank",
+    "closing_rank",
+    "year",
+    "round_number",
+    "category_le",
+    "quota_le",
+    "state_le",
+    "seat_ratio",
+    "historical_cutoff_gap"
+  ],
+  "target": "college_name_le",
+  "train_rows": 47411,
+  "val_rows": 10159,
+  "test_rows": 10160,
+  "total_rows": 67730,
+  "num_colleges": 200,
+  "min_college_rows": 0,
+  "label_encoders_path": "data/training/label_encoders.pkl"
+}

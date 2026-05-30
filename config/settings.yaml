@@ -1,0 +1,51 @@
+paths:
+  raw_dir: data/raw
+  extracted_dir: data/extracted
+  cleaned_dir: data/cleaned
+  ml_ready_dir: data/ml_ready
+  logs_dir: data/logs
+  checkpoints_dir: data/checkpoints
+
+database:
+  host: localhost
+  port: 5432
+  name: neet_counselling
+  user: neet_user
+  password: neet_pass_2024
+
+crawler:
+  max_concurrent: 5
+  page_timeout_ms: 120000
+  delay_between_requests:
+    min: 3.0
+    max: 6.0
+  max_retries: 5
+
+downloader:
+  max_concurrent: 8
+  chunk_size: 8192
+  max_retries: 5
+  checksum_algorithm: sha256
+
+extraction:
+  confidence_threshold: 0.8
+  max_concurrent: 6
+  ocr_max_concurrent: 3
+
+normalizer:
+  max_concurrent: 4
+  fuzzy_match_threshold: 85
+
+validation:
+  max_concurrent: 3
+  min_usable_rows_pct: 95
+  max_duplicate_pct: 2
+  min_historical_consistency_pct: 90
+
+db_ingestion:
+  max_concurrent: 3
+  batch_size: 1000
+
+ml:
+  train_test_split: 0.8
+  random_seed: 42

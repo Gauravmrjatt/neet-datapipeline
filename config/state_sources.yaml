@@ -1,0 +1,43 @@
+# State portal configurations for NEET UG counselling crawlers
+# Added for Phase 2: state-level data expansion
+
+state_portals:
+  maharashtra:
+    name: Maharashtra CET Cell
+    base_url: https://cetcell.mahacet.org
+    notices_path: /notifications/
+    site_type: wordpress
+    years: [2022, 2023, 2024, 2025]
+    state_name: Maharashtra
+
+  tamil_nadu:
+    name: Tamil Nadu Medical Selection
+    base_url: https://tnmedicalselection.org
+    notices_path: /
+    site_type: aspnet
+    years: [2020, 2021, 2022, 2023, 2024, 2025]
+    state_name: Tamil Nadu
+
+  west_bengal:
+    name: West Bengal Medical Counselling Committee
+    base_url: https://wbmcc.nic.in
+    notices_path: /notifications/
+    site_type: wordpress_goi
+    years: [2020, 2021, 2022, 2023, 2024, 2025]
+    state_name: West Bengal
+
+  gujarat:
+    name: ACPMEC Gujarat
+    base_url: https://medadmgujarat.org
+    notices_path: /ug/
+    site_type: aspnet
+    years: [2020, 2021, 2022, 2023, 2024, 2025]
+    state_name: Gujarat
+
+  karnataka:
+    name: Karnataka KEA
+    base_url: https://cetonline.karnataka.gov.in/kea
+    notices_path: /ugneet2025.aspx
+    site_type: aspnet
+    years: [2020, 2021, 2022, 2023, 2024, 2025]
+    state_name: Karnataka

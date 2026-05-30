@@ -1,0 +1,63 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  console_formatter:
+    format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  json_formatter:
+    class: logging.Formatter
+    format: '{"timestamp": "%(asctime)s", "level": "%(levelname)s", "logger": "%(name)s", "message": "%(message)s", "module": "%(module)s", "function": "%(funcName)s", "line": %(lineno)d}'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: console_formatter
+    stream: ext://sys.stdout
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: json_formatter
+    filename: data/logs/pipeline.log
+    maxBytes: 104857600
+    backupCount: 5
+    encoding: utf-8
+
+loggers:
+  link_discovery:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  downloader:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  pdf_extractor:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  ocr_agent:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  normalizer:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  validator:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  db_ingestion:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+  qa_agent:
+    level: DEBUG
+    handlers: [console, file]
+    propagate: false
+
+root:
+  level: INFO
+  handlers: [console, file]

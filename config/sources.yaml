@@ -1,0 +1,28 @@
+mcc:
+  base_url: https://mcc.nic.in
+  archive_ug: /archive-ug/
+  current_events: /current-events-ug/
+  pagination_pattern: /page/{n}/
+  pdf_cdn_base: https://cdnbbsr.s3waas.gov.in/s3e0f7a4d0ef9b84b83b693bbf3feb8e6e/uploads/
+
+  years:
+    - 2019
+    - 2020
+    - 2021
+    - 2022
+    - 2023
+    - 2024
+    - 2025
+
+  document_filters:
+    - "Final Result"
+    - "Seat Matrix"
+    - "Allotment"
+    - "Admitted"
+    - "Joined"
+
+  exclude_filters:
+    - "Notice"
+    - "Schedule"
+    - "Provisional"
+    - "Corrigendum"

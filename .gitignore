@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+*.ipynb_checkpoints/
+
+# Raw PDFs (too large, can be re-downloaded)
+data/raw/mcc/
+data/raw/state_portals/
+data/download_manifest.csv
+data/state_download_manifest.csv
+data/state_links_inventory.csv
+data/links_inventory.csv
+data/db_ingestion_checkpoint.json
+data/state_portal_checkpoint.json
+data/link_discovery_checkpoint.json
+
+# Extracted JSONs (can be regenerated)
+data/extracted/
+
+# Checkpoints
+data/checkpoints/
+
+# Large CSVs (regeneratable)
+data/cleaned/normalized_dataset.csv
+data/cleaned/merged_dataset.csv
+data/ml_ready/
+data/validated/
+data/normalization_log.csv
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (large, keep separate)
+models/
