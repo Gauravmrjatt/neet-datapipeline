@@ -1,6 +1,5 @@
 """
 NEET All India College Predictor 2026 — Streamlit UI
-Matches brilliantpala.org layout exactly.
 Pure rule-based, no ML model.
 """
 
@@ -11,7 +10,7 @@ from pathlib import Path
 
 # ── Constants ────────────────────────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent.parent
-BP_DATA = BASE_DIR / "data" / "raw" / "brilliantpala_raw.csv"
+BP_DATA = BASE_DIR / "data" / "raw" / "allotment_data.csv"
 
 CHANCE_HIGH = "High"
 CHANCE_GOOD = "Good"
@@ -32,12 +31,7 @@ STATE_REGIONS = {
 @st.cache_data
 def load_data():
     df = pd.read_csv(BP_DATA)
-    df = df.rename(columns={
-        "institute": "college_name",
-        "candidateCategory": "candidateCategory",
-        "allottedCategory": "allottedCategory",
-        "rank": "closing_rank",
-    })
+    df = df.rename(columns={"institute": "college_name", "rank": "closing_rank"})
     return df
 
 
